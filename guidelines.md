@@ -42,9 +42,7 @@ Contents
 [TOC]
 
 
-_The LSST DESC Coding Guidelines is licensed for re-use according to Creative Commons CCBY 4.0 with appropriate credit. You can view a copy of this license at https://creativecommons.org/licenses/by/4.0/. To help track people’s_
-
-_improvements and best practice, please acknowledge “LSST DESC Coding Guidelines” when re-using this document._
+_The LSST DESC Coding Guidelines is licensed for re-use according to Creative Commons CCBY 4.0 with appropriate credit. You can view a copy of this license at https://creativecommons.org/licenses/by/4.0/. To help track people’s improvements and best practice, please acknowledge “LSST DESC Coding Guidelines” when re-using this document._
 
 
 ## Introduction
@@ -257,7 +255,7 @@ A typical code review is on a single pull request, covering a relatively modest 
 
 ### Other References 
 
-Mike Jarvis discussed an early version of this document at an LSST DESC [Hack/Sprint Week](https://confluence.slac.stanford.edu/display/LSSTDESC/Sprint+Week%3A+Dec+4-8+2017+-+Argonne+National+Lab) _(link accessible to DESC members) _in December, 2017.  See the [video](https://www.youtube.com/watch?v=ZI1DpwEaqjs&feature=youtu.be) of that presentation.
+Mike Jarvis discussed an early version of this document at an LSST DESC [Hack/Sprint Week](https://confluence.slac.stanford.edu/display/LSSTDESC/Sprint+Week%3A+Dec+4-8+2017+-+Argonne+National+Lab) _(link accessible to DESC members)_ in December, 2017.  See the [video](https://www.youtube.com/watch?v=ZI1DpwEaqjs&feature=youtu.be) of that presentation.
 
 Mike Jarvis presented LSST DESC Dark Energy School lessons on unit tests in July, 2017 and code reviews in February, 2018.  Videos of these and other software-related Dark Energy School lessons are available [here](https://lsstdesc.org/pages/DESchool.html).
 
