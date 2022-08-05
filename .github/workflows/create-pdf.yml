@@ -20,10 +20,10 @@ jobs:
         
       - name: set up pandoc  
         uses: pandoc/latex:2.19.0.0
-          with:
-            args: >- 
-              --output=output/result.pdf 
-              guidelines.md
+        with:
+          args: >- 
+            --output=output/result.pdf 
+            guidelines.md
 
 
       - uses: actions/upload-artifact@v3
