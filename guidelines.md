@@ -47,7 +47,7 @@ _The LSST DESC Coding Guidelines is licensed for re-use according to Creative Co
 _improvements and best practice, please acknowledge “LSST DESC Coding Guidelines” when re-using this document._
 
 
-## Introduction {#introduction}
+## Introduction
 
 We develop a lot of code collaboratively, in collaboration-wide (and often public) repositories, for a wide range of applications (including cosmology analysis, LSST Science Pipeline image processing and feature measurement, large scale data challenge simulation and so on).
 
@@ -60,12 +60,10 @@ This short document gives some simple guidelines to follow when writing and revi
 In this document, we’re only talking about DESC Tools and Analysis software (like [DESCQA](https://github.com/LSSTDESC/descqa) and [CCL](https://github.com/LSSTDESC/CCL)), but you might nonetheless find that getting in the habit of writing your personal experimental code to the same standards is helpful when contributing to collaboration code later.
 
 
-## Guidelines for Coders {#guidelines-for-coders}
+## Guidelines for Coders
 
 
-#### Getting Started {#getting-started}
-
-
+#### Getting Started
 
 * LSST DESC has a [GitHub organization](https://github.com/LSSTDESC) that all members should automatically have access to if they have [added their GitHub ID to the membership database](https://confluence.slac.stanford.edu/display/LSSTDESC/Automatic+Maintenance+of+GitHub+Teams) (_accessible only to DESC members_).  Look for a repository (repo) corresponding to the project you are interested in.   There are many useful tips for how to effectively use the DESC’s GitHub organization, manage teams, etc. [here](https://confluence.slac.stanford.edu/display/LSSTDESC/GitHub+Tips) (_accessible only to DESC members_).
 * When starting a new GitHub repo in the LSSTDESC organization, the first decision is whether to make it “private” or “public”. “Private” repos can be viewed only by the admins/creators until they add GitHub teams to the repo with read or write access; private repos are not accessible by anyone with the link. “Public” repos can be viewed by anyone on the web. In both cases, “Write” (or “Push”) permissions can be granted on a team-by-team basis by the repo admins. We encourage people to develop software in the open, in public repos. Open software is beneficial because it allows others to learn, improve, re-use, and contribute to the code. However, we understand that some members of the collaboration may be uncomfortable with this approach. At minimum, we strongly recommend that DESC code should be shared within the collaboration: this can be achieved by using a private repo that has the Members or Full Members team added with Read permissions.  (Note that adding them all with Write permissions will auto-subscribe them as watchers of the repository, which requires them to take action to avoid getting notifications.  For this reason, it is worth creating a GitHub team for the team of developers (dev team) and giving that team Write access.)
@@ -78,10 +76,9 @@ In this document, we’re only talking about DESC Tools and Analysis software (l
 * The [DESC software policy](https://lsstdesc.org/assets/pdf/policies/LSST_DESC_Software_Policy_Nov2021.pdf) describes DESC members’ responsibilities to ensure robust collaborative software development.
 
 
-#### Software Packaging and Licensing {#software-packaging-and-licensing}
+#### Software Packaging and Licensing 
 
 Please see the [DESC repository guidelines](https://confluence.slac.stanford.edu/download/attachments/215859451/Guidelines%20for%20DESC%20Repositories.pdf?version=1&modificationDate=1528306924000&api=v2) (_accessible only to DESC members)_ in addition to notes below.
-
 
 
 * All DESC software should carry a [BSD-3-Clause](https://www.google.com/url?q=https://opensource.org/licenses/BSD-3-Clause&sa=D&source=editors&ust=1623805391366000&usg=AOvVaw1aduMKU0oywJ-LykKD-1bu) license (as noted in the above-linked repository guidelines) when at all possible. If your package includes code from some other code base, please make sure it is attributed and licensed properly. For example, if you are using code licensed under GPL, then your package must be GPL as well. 
@@ -91,9 +88,7 @@ Please see the [DESC repository guidelines](https://confluence.slac.stanford.edu
 * Reproducibility is not an excuse to fully fix your dependencies. If your package gives a different answer on a numpy minor version change, then you are probably doing something you shouldn’t be. Further, end users can use tools like Docker and conda to make reproducible environments if they need them. 
 
 
-#### Coding Style {#coding-style}
-
-
+#### Coding Style 
 
 * Suggestions are [PEP 8](https://www.python.org/dev/peps/pep-0008/) for Python and one of [Google](https://google.github.io/styleguide/cppguide.html), [Sutter & Stroustrup](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md), or [LSSTDM](https://developer.lsst.io/coding/cpp_style_guide.html) for C++/C, but don’t sweat it too much.
 * Linters like [flake8](http://flake8.pycqa.org/) can be very good for catching bugs as you write code.
@@ -110,9 +105,7 @@ Please see the [DESC repository guidelines](https://confluence.slac.stanford.edu
 * More experienced developers may often be able to provide style guidance as well.
 
 
-#### Documentation {#documentation}
-
-
+#### Documentation 
 
 * Docstrings (or other similar user-oriented documentation) should fully describe everything the user will need to understand to use your code.
 * In-code comments should describe to a later developer (e.g., yourself in 2 years) how your code works, where the algorithm comes from, etc.
@@ -127,9 +120,7 @@ Please see the [DESC repository guidelines](https://confluence.slac.stanford.edu
 * Know your audience. There is always a trade-off between your individual coding speed (important for being able to react to changing circumstances and constraints) and the collaborative development of the code (important for overall development speed, and collective understanding of the code). The documentation that you will need for yourself when you look back in 6 weeks time may be different from the documentation that a new DESC member needs now to be able to get up to speed and start contributing. Being nimble as a group means reaching the right level of documentation at the right time. 
 
 
-#### Commits  {#commits}
-
-
+#### Commits 
 
 * Ideally, each commit should be a single atomic change in functionality.  The new code should:
     * include tests that the functionality change is correct;
@@ -141,8 +132,7 @@ Please see the [DESC repository guidelines](https://confluence.slac.stanford.edu
 * Another exception to the “atomic commit” ideal is if you don’t know how to fix a bug.  It is perfectly reasonable to commit something with the message “Tried to implement XXX.  Fails YYY test.” And then ping some other developer in the project and ask them to help you figure out how to fix it.
 
 
-#### Tests {#tests}
-
+#### Tests 
 
 
 * Some form of testing should always be done.  However, not all aspects of the list below are always relevant.  Use common sense to determine which items are important to ensure correctness of your code.  (But be aware that your code reviewer may ask for more - see sections below on code review.)
@@ -161,9 +151,7 @@ Please see the [DESC repository guidelines](https://confluence.slac.stanford.edu
 * See also Mike Jarvis’s [DE School lesson on unit tests](https://lsstdesc.org/pages/DESchool.html#MikeJarvis).
 
 
-#### Contributing Your Work {#contributing-your-work}
-
-
+#### Contributing Your Work 
 
 * Beyond the initial setup phase of a project, contributions to collaborative code bases should be made by pull request, so they can be reviewed by your collaborators. 
 * It is possible in GitHub to set up repositories with “branch protection”, which enforces rules about not pushing directly to certain branches.  Protecting the main branch ensures that all code integration to main occurs via pull request.  This can be a useful guard against mistakes especially in repositories that include many people with write privileges.  Please note that some older repositories might have a “master” rather than a main branch due to a change in nomenclature.
@@ -179,12 +167,9 @@ Please see the [DESC repository guidelines](https://confluence.slac.stanford.edu
 * If you’re the only developer of a particular bit of code, the above workflow might not make sense for you.  However, still consider asking for code reviews occasionally.  E.g. once the code is ready for use in a DESC analysis or paper.  Even for software with just a single developer, the GitHub PR interface is handy for checking over changes before merging to main.
 
 
-## Guidelines for Code Reviewers {#guidelines-for-code-reviewers}
+## Guidelines for Code Reviewers 
 
-
-#### Who should review? {#who-should-review}
-
-
+#### Who should review? 
 
 * Often a project team has one or more lead developers.  At least one of these people should probably review every PR within a project.
 * Less experienced developers should try to make a habit of reviewing code regularly.  Reading and evaluating other code is a great way to learn better coding practices.
@@ -194,9 +179,7 @@ Please see the [DESC repository guidelines](https://confluence.slac.stanford.edu
 * As a reviewer, if you realize that you don’t have the appropriate expertise to review a particular section of the code, it is very helpful to @ mention someone who you think might.  (e.g. “I don’t quite follow the math here.  @jdeveloper could you take a look and make sure this seems ok?”) They can then just review that portion of the code, rather than the whole PR.
 
 
-#### Questions to ask {#questions-to-ask}
-
-
+#### Questions to ask 
 
 * Does the code do what it is apparently intended to do?
 * Is there a test (or example) of the typical way that users will want to use this code?
@@ -215,9 +198,7 @@ Please see the [DESC repository guidelines](https://confluence.slac.stanford.edu
     * The purpose of the repeated sections of code is the same.
 
 
-#### What happens after the review? {#what-happens-after-the-review}
-
-
+#### What happens after the review?
 
 * Once the PR is approved, it is the developer’s job to merge the PR. This is to enable them to take care of any modifications left optional by the reviewer, or to first issue any remaining problems before merging (if they want to do things in this order). 
 * Occasionally a repo admin may merge an approved PR, if they are trying to get to a new release, for example.
@@ -225,10 +206,9 @@ Please see the [DESC repository guidelines](https://confluence.slac.stanford.edu
 * A common pattern when you think you are ready to merge a PR is to state a timeline when you plan to merge.  (e.g. “will merge this tomorrow afternoon unless I hear otherwise”)  This allows people who had wanted to review (or may currently be in the process of reviewing) time to push back on this plan if they want more time to finish their review.
 
 
-#### Comprehensive Code Reviews {#comprehensive-code-reviews}
+#### Comprehensive Code Reviews 
 
 A typical code review is on a single pull request, covering a relatively modest set of changes covering more or less a single topic, which are requested to be merged into the main branch.  Occasionally though, one may want to get someone (usually external to the development team) to do a comprehensive code review of the whole API and overall design of the code already on the main branch.  This should be rare -- at most once per project probably, since it is quite a lot of work.  **Ideally, an experienced developer with a lot of code design experience will be involved in code design and reviews all along, so that this process will not be needed.**
-
 
 
 * The focus of such a review should mostly be on high-level design, both in terms of the user-directed API choices, and also how aspects of the implementation will impact the efficiency and long-term maintainability.  Comments on details are fine, but should not be the primary focus.
@@ -238,9 +218,7 @@ A typical code review is on a single pull request, covering a relatively modest 
 * GitHub doesn’t enable line comments on the main repository, but one can trick it into giving you line comments with the procedure in the [“Comprehensive Code Review” appendix](#comprehensive-code-review-process) (cf. e.g. the [CCL review](https://github.com/LSSTDESC/CCL/pull/433)).
 
 
-#### Further Reading {#further-reading}
-
-
+#### Further Reading 
 
 * [Practical Lessons in Peer Code Review](http://blog.salsitasoft.com/practical-lessons-in-peer-code-review/) - Salsita Software blog
 * [Better Learning through Code Reviews](https://capgemini.github.io/learning/better-learning-code-reviews/) - Capgemini Engineering blog
@@ -249,11 +227,10 @@ A typical code review is on a single pull request, covering a relatively modest 
 * See also Mike Jarvis’s [DE School lesson on code reviews](https://lsstdesc.org/pages/DESchool.html#MikeJarvis3).
 
 
-## Guidelines for Coding Teams {#guidelines-for-coding-teams}
+## Guidelines for Coding Teams 
 
 
-#### Things to think about {#things-to-think-about}
-
+#### Things to think about 
 
 
 * Continuous code review makes final review before release easy, and is really necessary for coding development carried out by teams. 
@@ -263,9 +240,7 @@ A typical code review is on a single pull request, covering a relatively modest 
 * More generally, try to leverage other existing code as much as possible rather than develop everything yourselves.
 
 
-#### Versioning {#versioning}
-
-
+#### Versioning
 
 * For the sake of simplifying communication and ensuring reproducibility of results, any code that is used by people outside of the development team, or even used for science results only by the dev team, should be versioned. This can be achieved with the GitHub “release” mechanism, which is a wrapper for git tag.
 * Use M.m.r versioning, where M is the major version, m is the minor version, and r is the revision or patch.  This is called [Semantic Versioning](https://semver.org/).
@@ -277,12 +252,10 @@ A typical code review is on a single pull request, covering a relatively modest 
 * Consider using [Versioneer](https://github.com/warner/python-versioneer) to help keep track of versions automatically.  It makes sure the version reported by your code matches the tagged release that appears on GitHub.  It can also give a version for runs off of main (not recommended!) when necessary.
 
 
+## Appendix 
 
 
-## Appendix {#appendix}
-
-
-### Other References {#other-references}
+### Other References 
 
 Mike Jarvis discussed an early version of this document at an LSST DESC [Hack/Sprint Week](https://confluence.slac.stanford.edu/display/LSSTDESC/Sprint+Week%3A+Dec+4-8+2017+-+Argonne+National+Lab) _(link accessible to DESC members) _in December, 2017.  See the [video](https://www.youtube.com/watch?v=ZI1DpwEaqjs&feature=youtu.be) of that presentation.
 
@@ -291,7 +264,7 @@ Mike Jarvis presented LSST DESC Dark Energy School lessons on unit tests in July
 The DESC CI2 study group report has some early recommendations (circa 2016) for DESC software development practices - largely superseded by these guidelines and the [DESC software policy](https://lsstdesc.org/assets/pdf/policies/LSST_DESC_Software_Policy_Nov2021.pdf), but available for reference [here](https://confluence.slac.stanford.edu/display/LSSTDESC/Operations+Plan?preview=%2F215844835%2F215844836%2Fci2.pdf) _(link accessible to DESC members)_
 
 
-### Comprehensive code review process {#comprehensive-code-review-process}
+### Comprehensive code review process
 
 Below are the steps to force GitHub to allow you to carry out a comprehensive code review of an entire code base.  In the instructions below, all branch names are in italics.
 
