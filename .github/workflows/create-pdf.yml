@@ -4,17 +4,12 @@ on: [workflow_dispatch]
 
 # List of jobs for this workflow.
 jobs:
-  
-
-    runs-on: ubuntu-20.04
-
 
     # Our CI steps for this job.
     steps:     
      
       # Check out this repository code.
-      - name: Check out repository code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         
         run: mkdir output
         
