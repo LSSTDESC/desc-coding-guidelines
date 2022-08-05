@@ -1,0 +1,27 @@
+name: Create PDF using pandocs
+
+on: [workflow_dispatch]
+
+# List of jobs for this workflow.
+jobs:
+
+    # Our CI steps for this job.
+    steps:     
+     
+      # Check out this repository code.
+      - uses: actions/checkout@v3
+        
+        run: mkdir output
+        
+      - name: set up pandoc  
+        uses: pandoc/latex:2.19.0.0
+        with:
+          args: >- 
+            --output=output/result.pdf 
+            guidelines.md
+
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: output
+          path: output
