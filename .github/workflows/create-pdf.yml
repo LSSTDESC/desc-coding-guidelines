@@ -4,17 +4,19 @@ on: [workflow_dispatch]
 
 # List of jobs for this workflow.
 jobs:
-
+  convert:
     runs-on: ubuntu-20.04
     steps:     
      
       # Check out this repository code.
       - name: checkout repo 
         uses: actions/checkout@v3
+    
+      - name: setup output dir
         run: mkdir output
         
       - name: set up pandoc  
-        uses: pandoc/latex:2.19.0.0
+        uses: docker://pandoc/latex:2.19.0.0
         with:
           args: >- 
             --output=output/result.pdf 
