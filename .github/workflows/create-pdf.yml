@@ -5,12 +5,12 @@ on: [workflow_dispatch]
 # List of jobs for this workflow.
 jobs:
 
-    # Our CI steps for this job.
+    runs-on: ubuntu-20.04
     steps:     
      
       # Check out this repository code.
-      - uses: actions/checkout@v3
-        
+      - name: checkout repo 
+        uses: actions/checkout@v3
         run: mkdir output
         
       - name: set up pandoc  
@@ -21,7 +21,8 @@ jobs:
             guidelines.md
 
 
-      - uses: actions/upload-artifact@v3
+      - name: upload
+        uses: actions/upload-artifact@v3
         with:
           name: output
           path: output
