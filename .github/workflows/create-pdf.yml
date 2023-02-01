@@ -19,6 +19,7 @@ jobs:
         uses: docker://pandoc/latex:2.19.0.0
         with:
           args: >- 
+            --toc
             --output=output/result.pdf 
             guidelines.md
 
