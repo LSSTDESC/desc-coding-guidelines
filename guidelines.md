@@ -36,11 +36,29 @@ _The Computing (CO, formally Computing Infrastructure or CI) Working Group, Febr
 
 _Contributions from: Phil Marshall, Mike Jarvis, Rachel Mandelbaum, Yao-Yuan Mao, Mike Wang, Seth Digel, Andy Connolly, Matthew R Becker, Johann Cohen-Tanugi, Heather Kelly, Francois Lanusse, Joanne Bogart_
 
-Contents
+### Contents
 
-
-[TOC]
-
+* [Introduction]
+* [Guidelines for Coders]
+    * [Getting Started]
+    * [Software Packaging and Licensing]
+    * [Coding Style]
+    * [Documentation]
+    * [Commits]
+    * [Tests]
+    * [Contributing Your Work]
+* [Guidelines for Code Reviewers]
+    * [Who should review?]
+    * [Questions to ask]
+    * [What happens after the review?]
+    * [Comprehensive Code Reviews]
+    * [Further Reading]
+* [Guidelines for Coding Teams]
+    * [Things to think about]
+    * [Versioning]
+* [Appendix]
+    * [Other References]
+    * [Comprehensive code review process]
 
 _The LSST DESC Coding Guidelines is licensed for re-use according to Creative Commons CCBY 4.0 with appropriate credit. You can view a copy of this license at https://creativecommons.org/licenses/by/4.0/. To help track people’s improvements and best practice, please acknowledge “LSST DESC Coding Guidelines” when re-using this document._
 

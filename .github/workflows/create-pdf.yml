@@ -16,10 +16,11 @@ jobs:
         run: mkdir output
         
       - name: set up pandoc  
-        uses: docker://pandoc/latex:2.19.0.0
+        uses: docker://pandoc/latex:3
         with:
           args: >- 
-            --toc
+            -V colorlinks=true 
+            -V linkcolor=blue 
             --output=output/DESC_Coding_Guidelines.pdf 
             guidelines.md
 
