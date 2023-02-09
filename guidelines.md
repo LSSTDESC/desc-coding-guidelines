@@ -32,7 +32,7 @@ Conversion notes:
 
 ## LSST DESC Coding Guidelines
 
-_The Computing (CO, formally Computing Infrastructure or CI) Working Group, February, 2018; most recently updated in July, 2022_
+_The Computing (CO, formally Computing Infrastructure or CI) Working Group, February, 2018; most recently updated in February, 2023_
 
 _Contributions from: Phil Marshall, Mike Jarvis, Rachel Mandelbaum, Yao-Yuan Mao, Mike Wang, Seth Digel, Andy Connolly, Matthew R Becker, Johann Cohen-Tanugi, Heather Kelly, Francois Lanusse, Joanne Bogart_
 
@@ -89,6 +89,7 @@ In this document, we’re only talking about DESC Tools and Analysis software (l
 * Or alternatively, maybe you have an idea for a feature or improvement that is not currently an issue.  Go ahead and open a new issue.
 * This is a social coding environment.  People want to help you succeed.  Keep talking.
 * If you have technical trouble (e.g, working with git or setting up continuous integration), you can ask for help on the #desc-github-help or #desc-software-help Slack channels respectively.
+* The [DESC Python Packaging and Continuous Integration Guide](http://lsstdesc.org/desc-continuous-integration/) documents Python packaging and Continuous Integration.
 * The [DESC software policy](https://lsstdesc.org/assets/pdf/policies/LSST_DESC_Software_Policy_Nov2021.pdf) describes DESC members’ responsibilities to ensure robust collaborative software development.
 
 
@@ -160,7 +161,7 @@ Please see the [DESC repository guidelines](https://confluence.slac.stanford.edu
 * If there are specific special cases where the answer can be known analytically or via some other means, these are good functional tests as well.
 * Think about edge cases.  What might cause your code to fail?  You should add tests that these edge cases work correctly.
 * Integration tests check that your class/function/etc. works correctly with other parts of the overall code base.
-* All of the above tests should be part of a test suite that is run regularly, ideally via a continuous integration [CI] system like GitHub Actions.
+* All of the above tests should be part of a test suite that is run regularly, ideally via a continuous integration (CI) system like GitHub Actions. See the [DESC Python Packaging and Continuous Integration Guide](http://lsstdesc.org/desc-continuous-integration/desc/ci/what_is_ci.html)
 * Code validation, where you run the new code on a large set of data or perform a long calculation, is often important during development.  The results should be made available to the code reviewer, but you do not necessarily want to include this in your continuous integration.
 * If some kind of code validation was helpful, think whether a smaller/faster version of it could reasonably be included in your CI test suite.
 * Don’t forget demos and tutorial notebooks.  These are good integration tests that show how various parts of your code fit together (and can also be included in the CI test suite!).
@@ -272,6 +273,8 @@ A typical code review is on a single pull request, covering a relatively modest 
 
 
 ### Other References 
+
+The [DESC Python Packaging and Continuous Integration Guide](http://lsstdesc.org/desc-continuous-integration/) written in 2022 offers up to date information on Python Packaging, using GitHub Actions, and GitLab for continuous integration testing.
 
 Mike Jarvis discussed an early version of this document at an LSST DESC [Hack/Sprint Week](https://confluence.slac.stanford.edu/display/LSSTDESC/Sprint+Week%3A+Dec+4-8+2017+-+Argonne+National+Lab) _(link accessible to DESC members)_ in December, 2017.  See the [video](https://www.youtube.com/watch?v=ZI1DpwEaqjs&feature=youtu.be) of that presentation.
 
