@@ -32,7 +32,7 @@ Conversion notes:
 
 ## LSST DESC Coding Guidelines
 
-_The Computing (CO, formally Computing Infrastructure or CI) Working Group, February, 2018; most recently updated in July, 2022_
+_The Computing (CO, formally Computing Infrastructure or CI) Working Group, February, 2018; most recently updated in February, 2023_
 
 _Contributions from: Phil Marshall, Mike Jarvis, Rachel Mandelbaum, Yao-Yuan Mao, Mike Wang, Seth Digel, Andy Connolly, Matthew R Becker, Johann Cohen-Tanugi, Heather Kelly, Francois Lanusse, Joanne Bogart_
 
