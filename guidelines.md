@@ -274,7 +274,7 @@ A typical code review is on a single pull request, covering a relatively modest 
 
 ### Other References 
 
-The [DESC Python Packaging and Continuous Integration](http://lsstdesc.org/desc-continuous-integration/) written in 2022 offers up to date information on Python Packaging, using GitHub Actions, and GitLab for continuous integration testing.
+The [DESC Python Packaging and Continuous Integration Guide](http://lsstdesc.org/desc-continuous-integration/) written in 2022 offers up to date information on Python Packaging, using GitHub Actions, and GitLab for continuous integration testing.
 
 Mike Jarvis discussed an early version of this document at an LSST DESC [Hack/Sprint Week](https://confluence.slac.stanford.edu/display/LSSTDESC/Sprint+Week%3A+Dec+4-8+2017+-+Argonne+National+Lab) _(link accessible to DESC members)_ in December, 2017.  See the [video](https://www.youtube.com/watch?v=ZI1DpwEaqjs&feature=youtu.be) of that presentation.
 
