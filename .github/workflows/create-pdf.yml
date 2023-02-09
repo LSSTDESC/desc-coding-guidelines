@@ -1,6 +1,8 @@
 name: Create PDF using pandocs
 
-on: [workflow_dispatch]
+on:
+   pull_request:
+   workflow_dispatch:
 
 # List of jobs for this workflow.
 jobs:
