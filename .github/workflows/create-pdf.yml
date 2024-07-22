@@ -23,6 +23,7 @@ jobs:
           args: >- 
             -V colorlinks=true 
             -V linkcolor=blue 
+            -f commonmark
             --output=output/DESC_Coding_Guidelines.pdf 
             guidelines.md
 
