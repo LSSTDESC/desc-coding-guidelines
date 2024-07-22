@@ -7,12 +7,12 @@ on:
 # List of jobs for this workflow.
 jobs:
   convert:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:     
      
       # Check out this repository code.
       - name: checkout repo 
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
     
       - name: setup output dir
         run: mkdir output
@@ -28,7 +28,7 @@ jobs:
 
 
       - name: upload
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: output
           path: output
