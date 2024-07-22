@@ -71,7 +71,7 @@ The way in which we develop code should make us more nimble, not less, and so th
 
 Ideally, you should find it easy to start contributing to an existing piece of LSST DESC code or to contribute new code and make it usable by anyone in the collaboration.  Adopting some lightweight standards helps with that.  
 
-This short document gives some simple guidelines to follow when writing and reviewing code in the DESC.  Specifically, we are talking about any piece of code that will be used in some capacity in a DESC paper.  This is a dynamic document that the collaboration will develop over time. There is also a longer and more comprehensive document produced by the [CI2 study group](https://github.com/LSSTDESC/ComputingModel/tree/master/Reports/ci2) (_accessible only to DESC members_), some aspects of which have been superseded by this document and the [DESC software policy](https://lsstdesc.org/assets/pdf/policies/LSST_DESC_Software_Policy_Nov2021.pdf).
+This short document gives some simple guidelines to follow when writing and reviewing code in the DESC.  Specifically, we are talking about any piece of code that will be used in some capacity in a DESC paper.  This is a dynamic document that the collaboration will develop over time. There is also a longer and more comprehensive document produced by the [CI2 study group](https://github.com/LSSTDESC/ComputingModel/tree/master/Reports/ci2) (_accessible only to DESC members_), some aspects of which have been superseded by this document and the [DESC software policy](https://lsstdesc.org/assets/pdf/policies/LSST_DESC_Software_Policy.pdf).
 
 In this document, we’re only talking about DESC Tools and Analysis software (like [DESCQA](https://github.com/LSSTDESC/descqa) and [CCL](https://github.com/LSSTDESC/CCL)), but you might nonetheless find that getting in the habit of writing your personal experimental code to the same standards is helpful when contributing to collaboration code later.
 
@@ -90,7 +90,7 @@ In this document, we’re only talking about DESC Tools and Analysis software (l
 * This is a social coding environment.  People want to help you succeed.  Keep talking.
 * If you have technical trouble (e.g, working with git or setting up continuous integration), you can ask for help on the #desc-github-help or #desc-software-help Slack channels respectively.
 * The [DESC Python Packaging and Continuous Integration Guide](http://lsstdesc.org/desc-continuous-integration/) documents Python packaging and Continuous Integration.
-* The [DESC software policy](https://lsstdesc.org/assets/pdf/policies/LSST_DESC_Software_Policy_Nov2021.pdf) describes DESC members’ responsibilities to ensure robust collaborative software development.
+* The [DESC software policy](https://lsstdesc.org/assets/pdf/policies/LSST_DESC_Software_Policy.pdf) describes DESC members’ responsibilities to ensure robust collaborative software development.
 
 
 #### Software Packaging and Licensing 
@@ -280,7 +280,7 @@ Mike Jarvis discussed an early version of this document at an LSST DESC [Hack/Sp
 
 Mike Jarvis presented LSST DESC Dark Energy School lessons on unit tests in July, 2017 and code reviews in February, 2018.  Videos of these and other software-related Dark Energy School lessons are available [here](https://lsstdesc.org/pages/DESchool.html).
 
-The DESC CI2 study group report has some early recommendations (circa 2016) for DESC software development practices - largely superseded by these guidelines and the [DESC software policy](https://lsstdesc.org/assets/pdf/policies/LSST_DESC_Software_Policy_Nov2021.pdf), but available for reference [here](https://confluence.slac.stanford.edu/display/LSSTDESC/Operations+Plan?preview=%2F215844835%2F215844836%2Fci2.pdf) _(link accessible to DESC members)_
+The DESC CI2 study group report has some early recommendations (circa 2016) for DESC software development practices - largely superseded by these guidelines and the [DESC software policy](https://lsstdesc.org/assets/pdf/policies/LSST_DESC_Software_Policy.pdf), but available for reference [here](https://confluence.slac.stanford.edu/display/LSSTDESC/Operations+Plan?preview=%2F215844835%2F215844836%2Fci2.pdf) _(link accessible to DESC members)_
 
 
 ### Comprehensive code review process
